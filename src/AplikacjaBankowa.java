@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class AplikacjaBankowa {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int account_balance = 10000;
+        System.out.println("Want you want to do? 1 - payment to account, 2 - payment from account");
+        int choice = scanner.nextInt();
+
+        if (choice == 1) {
+            System.out.println("How much money you want to put on the account?");
+            int puton = scanner.nextInt();
+            int account_new_balance = account_balance + puton;
+            System.out.println("Currently you have your account balance: " + account_new_balance);
+        }
+        else if (choice == 2) {
+            System.out.println("How much money you want to pay out?");
+            int payout = scanner.nextInt();
+            if (payout > 10000) {
+                System.out.println("You don't have such money my friend");
+            } else {
+                int account_new_balance = account_balance - payout;
+                System.out.println("Currently you have your account balance: " + account_new_balance);
+            }
+        }
+    }
+}
