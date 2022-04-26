@@ -4,7 +4,7 @@ public class AplikacjaBankowa {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int account_balance = 10000;
-        System.out.println("Want you want to do? 1 - payment to account, 2 - payment from account");
+        System.out.println("What you want to do? 1 - payment to account, 2 - payment from account");
         int choice = scanner.nextInt();
         switch (choice) {
             case 1:
